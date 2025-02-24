@@ -1,0 +1,287 @@
+/* portofolio SECTION */
+#portfolio {
+    background-color: black;
+    padding: 10px 0; 
+    color: white; 
+    margin-top: 0;
+}
+
+.main-text {
+    padding-top: 1px;
+    margin-top: 50px;
+    margin-bottom: 40px; /* Tambahkan margin untuk memberi jarak */
+}
+.layer h5{
+    margin-bottom: 35px;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+}
+
+.main-text h2 {
+    font-size: 50px;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 30px #0ef;
+}
+
+.main-text h2 span {
+    color: #0ef;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.row img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+    background-color: none;
+    background-image: none;
+    width: 100%;  /* Atur ukuran gambar lebih kecil dari sebelumnya */
+    max-width: 300px; /* Beri batas ukuran maksimum */
+    height: auto; /* Pastikan proporsi gambar tetap */
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+    
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: #feffff;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 65px;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 238, 255, 0.8)); 
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: auto; /* Tambahkan scrollbar jika teks terlalu panjang */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Teks tetap dari atas */
+    text-align: center;
+    padding: 20px;
+    transition: height 0.5s;
+}
+.layer p {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-height: 200px;
+    overflow-y: auto;
+    transition: max-height 0.5s ease-in-out;
+    font-weight: 100;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
+
+.row:hover .layer {
+    height: 100%;
+    width: 100%;
+    transition: height 0.5s ease-in-out;
+}
+
+.row {
+    padding: 10px; 
+    max-width: 300px; 
+    margin: auto; 
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.layer::-webkit-scrollbar {
+    width: 0px; /* Menghilangkan scrollbar */
+}
+
+/* Munculkan scrollbar saat hover */
+.layer:hover::-webkit-scrollbar {
+    width: 0px;
+    display: none; 
+}
+
+/* Warna track scrollbar */
+.layer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Warna thumb scrollbar */
+.layer::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 10px;
+}
+
+/* Scrollbar lebih terlihat saat hover */
+.layer:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8); 
+}
+/* Efek shadow di bawah gambar */
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Tambahkan shadow berdasarkan warna dominan */
+.row:nth-child(1) {
+    box-shadow: 0px 10px 20px rgba(255, 140, 0, 0.6); 
+    background: linear-gradient(to bottom, rgba(255, 140, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.row:nth-child(2) {
+    box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.6); 
+    background: linear-gradient(to bottom, rgba(0, 255, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.row:nth-child(3) {
+    box-shadow: 0px 10px 20px rgba(138, 43, 226, 0.6); 
+    background: linear-gradient(to bottom, rgba(138, 43, 226, 0.8), rgba(0, 0, 0, 0));
+}
+
+/* Hover menyesuaikan dengan warna gambar */
+.row:nth-child(1):hover .layer {
+    background: linear-gradient(rgba(255, 140, 0, 0.3), rgba(255, 140, 0, 0.8)); /* Orange untuk 5G */
+}
+
+.row:nth-child(2):hover .layer {
+    background: linear-gradient(rgba(0, 255, 0, 0.3), rgba(0, 255, 0, 0.8)); /* Green untuk Data Analysis */
+}
+
+.row:nth-child(3):hover .layer {
+    background: linear-gradient(rgba(138, 43, 226, 0.3), rgba(138, 43, 226, 0.8)); /* Purple untuk Web Scraper */
+}
+
+
+/* Efek glowing warna menyesuaikan gambar */
+.row:nth-child(1):hover {
+    --glow-color: rgba(255, 165, 0, 0.8); 
+}
+
+.row:nth-child(2):hover {
+    --glow-color: rgba(0, 255, 0, 0.8); 
+}
+
+.row:nth-child(3):hover {
+    --glow-color: rgba(138, 43, 226, 0.8); 
+}
+
+/* Efek saat hover */
+.row:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Tambahkan efek shadow di bawah gambar */
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Shadow dengan gradasi sesuai gambar */
+.row::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px; /* Atur tinggi shadow */
+    bottom: -10px; /* Atur posisi shadow */
+    left: 0;
+    border-radius: 8px;
+    filter: blur(15px); /* Efek blur agar lebih smooth */
+    opacity: 0.8;
+}
+
+.row:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.row {
+    animation: float 4s ease-in-out infinite;
+}
+
+.row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.row:hover::before {
+    opacity: 1;
+}
+
+/* Responsive adjustments for portfolio section */
+@media (max-width: 768px) {
+    .portfolio-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .main-text h2 {
+        font-size: 40px;
+    }
+    .layer h5 {
+        font-size: 16px;
+    }
+}

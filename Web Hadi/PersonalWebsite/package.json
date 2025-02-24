@@ -1,0 +1,17 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website using Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build src/styles.css -o dist/styles.css"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.0.0",
+    "postcss": "^8.0.0",
+    "autoprefixer": "^10.0.0"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
